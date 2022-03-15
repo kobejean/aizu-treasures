@@ -1,4 +1,5 @@
 {
   "title": "ようこそ",
+  "recent-posts": "最近の投稿",
   "text": "<a href=\"{{link}}\">ようこそ</a>"
 }

@@ -20,12 +20,13 @@
 		"eslint-plugin-svelte3": "^3.2.1",
 		"prettier": "^2.5.1",
 		"prettier-plugin-svelte": "^2.5.0",
-		"svelte": "^3.44.0",
 		"sass": "^1.46.0",
+		"svelte": "^3.44.0",
 		"svelte-preprocess": "^4.10.1"
 	},
 	"type": "module",
 	"dependencies": {
-		"sveltekit-i18n": "^2.1.1"
+		"sveltekit-i18n": "^2.1.1",
+		"mdsvex": "^0.10.5"
 	}
 }

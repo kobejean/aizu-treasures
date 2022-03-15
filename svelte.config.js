@@ -1,5 +1,7 @@
 import preprocess from 'svelte-preprocess';
+import { mdsvex } from 'mdsvex'
 import adapter from '@sveltejs/adapter-auto';
+import path from "path";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -17,10 +19,18 @@ const config = {
 		}
 	},
 
+	extensions: ['.md'],
+
 	preprocess: [
 		preprocess({
 			scss: {
 				prependData: '@use "src/variables.scss" as *;'
+			}
+		}),
+		mdsvex({
+			extensions: ['.md'],
+			layout: {
+				posts: path.resolve('./src/posts/__layout.svelte')
 			}
 		})
 	]

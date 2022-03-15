@@ -9,6 +9,34 @@ const config = {
   },
   loaders: [
     {
+      locale: 'ja',
+      key: 'menu',
+      loader: async () => (await import('./ja/menu.json')).default,
+    },
+    {
+      locale: 'ja',
+      key: 'home',
+      routes: ['', '/'],
+      loader: async () => (await import('./ja/home.json')).default,
+    },
+    {
+      locale: 'ja',
+      key: 'about',
+      routes: ['/about'],
+      loader: async () => (await import('./ja/about.json')).default,
+    },
+    {
+      locale: 'ja',
+      key: 'error',
+      routes: ['error'],
+      loader: async () => (await import('./ja/error.json')).default,
+    },
+    {
+      locale: 'ja',
+      key: 'shared',
+      loader: async () => (await import('./ja/shared.json')).default,
+    },
+    {
       locale: 'en',
       key: 'menu',
       loader: async () => (await import('./en/menu.json')).default,
@@ -32,27 +60,9 @@ const config = {
       loader: async () => (await import('./en/error.json')).default,
     },
     {
-      locale: 'ja',
-      key: 'menu',
-      loader: async () => (await import('./ja/menu.json')).default,
-    },
-    {
-      locale: 'ja',
-      key: 'home',
-      routes: ['', '/'],
-      loader: async () => (await import('./ja/home.json')).default,
-    },
-    {
-      locale: 'ja',
-      key: 'about',
-      routes: ['/about'],
-      loader: async () => (await import('./ja/about.json')).default,
-    },
-    {
-      locale: 'ja',
-      key: 'error',
-      routes: ['error'],
-      loader: async () => (await import('./ja/error.json')).default,
+      locale: 'en',
+      key: 'shared',
+      loader: async () => (await import('./en/shared.json')).default,
     },
   ],
 };
