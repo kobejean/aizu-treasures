@@ -1,6 +1,6 @@
 import preprocess from 'svelte-preprocess';
 import { mdsvex } from 'mdsvex'
-import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-auto';
 import path from "path";
 
 /** @type {import('@sveltejs/kit').Config} */
