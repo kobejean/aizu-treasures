@@ -10,7 +10,11 @@
   <meta property="og:title" content={title} />
 </svelte:head>
 
-<h1>{title}</h1>
-<p>Published: {date}</p>
+<header>
+    <h1>{title}</h1>
+    <p>Published: {date}</p>
+</header>
 
-<slot />
+<div id="post-content">
+    <slot />
+</div>

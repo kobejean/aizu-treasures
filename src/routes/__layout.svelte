@@ -16,9 +16,13 @@
 		return { stuff: { route, lang } };
 	};
 </script>
-
 <script>
+	import NavigationBar from '$lib/components/navigation-bar/NavigationBar.svelte'
 	import '../app.scss';
 </script>
+
+<header>
+  <NavigationBar />
+</header>
 
 <slot />

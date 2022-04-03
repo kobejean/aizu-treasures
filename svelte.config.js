@@ -1,6 +1,6 @@
 import preprocess from 'svelte-preprocess';
 import { mdsvex } from 'mdsvex'
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-static';
 import path from "path";
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -19,7 +19,7 @@ const config = {
 		}
 	},
 
-	extensions: ['.md'],
+	extensions: ['.md', '.svelte'],
 
 	preprocess: [
 		preprocess({

@@ -1,8 +1,13 @@
 <script context="module">
+    import { POST_COMPONENTS } from '$lib/utils/posts.js'
+    
     export async function load({ params }) {
-        // Must be relative import, see: https://github.com/rollup/plugins/tree/master/packages/dynamic-import-vars#limitations
-        const Post = (await import(`../../../posts/${params.slug}/${params.lang}.md`)).default;
+        const path = `/src/posts/${params.slug}/${params.lang}.md`;
+        const resource = POST_COMPONENTS[params.lang]?.[path];
 
+        if (!resource) return { status: 404 };
+        
+        const Post = (await resource()).default;
         return { props: { Post } }
     }
 </script>
